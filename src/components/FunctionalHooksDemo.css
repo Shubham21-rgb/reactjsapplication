@@ -1,0 +1,200 @@
+.hooks-container {
+  padding: 1rem 0;
+}
+
+.stats-bar {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(22, 33, 62, 0.8);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stat-label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.stat-value {
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.stat-value.online {
+  color: var(--success-color);
+}
+
+.stat-value.offline {
+  color: var(--danger-color);
+}
+
+.wide {
+  grid-column: span 2;
+}
+
+/* Todos Styles */
+.todos-stats {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.todos-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.todo-item:hover {
+  background: rgba(102, 126, 234, 0.2);
+  transform: translateX(5px);
+}
+
+.todo-item.completed {
+  opacity: 0.6;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: var(--text-secondary);
+}
+
+.todo-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: var(--success-color);
+}
+
+.todo-text {
+  flex: 1;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.btn-delete {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.btn-delete:hover {
+  background: rgba(248, 113, 113, 0.2);
+  transform: scale(1.1);
+}
+
+.no-todos {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 2rem;
+  font-style: italic;
+}
+
+/* Hooks List */
+.hooks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.hook-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.hook-item:hover {
+  background: rgba(102, 126, 234, 0.2);
+  transform: translateX(5px);
+}
+
+.hook-name {
+  font-family: 'Courier New', monospace;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.hook-badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.hook-badge.state {
+  background: rgba(102, 126, 234, 0.2);
+  color: var(--primary-color);
+}
+
+.hook-badge.effect {
+  background: rgba(74, 222, 128, 0.2);
+  color: var(--success-color);
+}
+
+.hook-badge.ref {
+  background: rgba(251, 191, 36, 0.2);
+  color: var(--warning-color);
+}
+
+.hook-badge.performance {
+  background: rgba(240, 147, 251, 0.2);
+  color: var(--accent-color);
+}
+
+@media (max-width: 1024px) {
+  .wide {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .stat-item {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .todos-stats {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
